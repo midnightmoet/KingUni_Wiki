@@ -1,7 +1,8 @@
 {
   "name": "kinguni_wiki",
   "version": "1.0.0",
-  "description": "kinguni_wiki project for Kingsland Jan 2021 cohot",
+  "description": "kinguni_wiki project for Kingsland Jan 2021 cohort",
+  "github repo": "https://github.com/midnightmoet/KingUni_Wiki",
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js"
