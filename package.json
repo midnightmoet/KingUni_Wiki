@@ -1,0 +1,23 @@
+{
+  "name": "kinguni_wiki",
+  "version": "1.0.0",
+  "description": "kinguni_wiki project for Kingsland Jan 2021 cohot",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "kinguni_wiki",
+    "kingsland",
+    "articles",
+    "CRUD",
+    "app"
+  ],
+  "author": "Lisa Miner",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "mongoose": "^6.0.1"
+  }
+}
