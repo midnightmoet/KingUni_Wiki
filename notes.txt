@@ -1,0 +1,4 @@
+Using my cubicle to compose a skeleton code set up to modify to work for this project.  
+Per instructor this would be a place to start for the approach.  Will modify as time goes on.
+The project is due by September 1st.  Goal is to get done as much as possible BUT the final product
+will be posted as a coding example that will be viewable.
