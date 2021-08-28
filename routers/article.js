@@ -1,15 +1,19 @@
-const routers = require('../routers');
+const router = require('express').Router();
 const controllers = require('../controllers');
 const auth = require('../utilities/auth');
 
-module.exports = (app) => {
-    app.use('/', routers.home);
-    
-    app.use('/user', routers.user);
+router.get('/create', auth(), controllers.article.get.create);
+router.post('/create', auth(), controllers.article.post.create);
 
-    app.use('/article', routers.article);
+router.get('/all', controllers.article.get.all);
 
-    app.use('*', (req, res, next) => {
-        res.send('<h1>PAGE NOT FOUND!</h1>');
-    });
-};
+router.get('/details/:id', auth(false), controllers.article.get.details);
+
+router.get('/edit/:id', auth(), controllers.article.get.edit);
+router.post('/edit/:id', auth(), controllers.article.post.edit);
+
+router.get('/delete/:id', auth(), controllers.article.delete);
+
+module.exports = router;
+
+// this works with clicking all articles

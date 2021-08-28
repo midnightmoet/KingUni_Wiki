@@ -1,18 +1,24 @@
 const models = require("../models");
 
 module.exports = {
+	// --GET --//
 	get: {
+		// -- CREATE -- //
 		create: (req, res) => {
 			res.render("create");
 		},
+
+		//-- ALL ARTICLES -- //
 		all: (req, res, next) => {
 			models.Article.find()
 				.select("title")
 				.then((articles) => {
-					res.render("all-articles", { articles });
+					res.render("all-articles", { articles }); 
 				})
 				.catch(next);
 		},
+
+		//--ARTICLE DETAILS -- //
 		details: (req, res, next) => {
 			const id = req.params.id;
 
@@ -28,6 +34,8 @@ module.exports = {
 				})
 				.catch(next);
 		},
+
+		//-- EDIT ARTICLES -- //
 		edit: (req, res) => {
 			const id = req.params.id;
 
@@ -38,12 +46,14 @@ module.exports = {
 				});
 		},
 	},
+
+	//--POST-- //
 	post: {
 		create: (req, res, next) => {
 			const { title, description } = req.body;
 			const userId = req.user._id;
 
-			models.Article.create({ title, description, author: userId })
+			models.Article.create({ title,  description, author: userId })
 				.then((article) => {
 					req.user.articles.push(article._id);
 
@@ -66,6 +76,8 @@ module.exports = {
 					res.render("create", { errors });
 				});
 		},
+
+		// -- EDIT POSTED ARTICLE -- //
 		edit: (req, res, next) => {
 			const id = req.params.id;
 			const { description: newDescription } = req.body;
@@ -93,6 +105,8 @@ module.exports = {
 				});
 		},
 	},
+
+	//-- DELETE YOUR ARTICLE -- //
 	delete: (req, res, next) => {
 		const id = req.params.id;
 

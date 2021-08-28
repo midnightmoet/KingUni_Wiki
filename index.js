@@ -10,7 +10,7 @@ databaseConnector().then(() => {
 
     const port = config.port;
 
-    console.log("STARTED");
+    console.log("Woot woot index.js is catching");
 
     app.listen(port, console.log(`Listening on port ${port}!`));
 }).catch(console.error);
