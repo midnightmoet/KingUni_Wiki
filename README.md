@@ -4,4 +4,5 @@
 
 <i> Remember before anything do an npm init to acquire YOUR node_modules and package.json file</i>
 
+<i>Project written using ExpressJS, MongoDB, and mongoose</i>
 <h4>Project not completed.  I will update when it is.</h4>
