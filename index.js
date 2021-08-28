@@ -1,9 +1,16 @@
-const env = process.env.NODE_ENV || 'development';
+global.__basedir = __dirname;
 
-const config = require('./config/config')[env];
-require('./config/database')(config);
-const app = require('express')();
-require('./config/express')(app);
-require('./config/routes')(app);
-require('./config/passport')();
-app.listen(config.port);
+const databaseConnector = require('./config/database');
+databaseConnector().then(() => {
+    const config = require('./config/config');
+    const app = require('express')();
+    
+    require('./config/express')(app);
+    require('./config/routes')(app);
+
+    const port = config.port;
+
+    console.log("STARTED");
+
+    app.listen(port, console.log(`Listening on port ${port}!`));
+}).catch(console.error);

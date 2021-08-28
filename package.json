@@ -1,28 +1,38 @@
 {
-  "name": "kinguni_wiki",
-  "version": "1.0.0",
-  "description": "kinguni_wiki project for Kingsland Jan 2021 cohort",
-  "github repo": "https://github.com/midnightmoet/KingUni_Wiki",
-  "main": "index.js",
-  "scripts": {
-    "test": "nodemon index.js"
-  },
-  "keywords": [
-    "kinguni_wiki",
-    "kingsland",
-    "articles",
-    "CRUD",
-    "app"
-  ],
-  "author": "Lisa Miner",
-  "license": "UNLICENSED",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-generator": "^4.16.1",
-    "express-handlebars": "^5.3.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.1",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
-  }
+	"name": "kinguni_wiki",
+	"version": "1.0.0",
+	"description": "kinguni_wiki project for Kingsland Jan 2021 cohort",
+	"github repo": "https://github.com/midnightmoet/KingUni_Wiki",
+	"main": "index.js",
+	"scripts": {
+		"test": "nodemon index.js"
+	},
+	"keywords": [
+		"kinguni_wiki",
+		"kingsland",
+		"articles",
+		"CRUD",
+		"app"
+	],
+	"author": "Lisa Miner",
+	"license": "UNLICENSED",
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"cookie-parser": "^1.4.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-generator": "^4.16.1",
+		"express-handlebars": "^5.3.3",
+		"express-validator": "^6.12.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongodb": "^4.1.1",
+		"mongoose": "^6.0.1",
+		"passport": "^0.4.1",
+		"passport-local": "^1.0.0",
+		"uniqid": "^5.4.0",
+		"validator": "^13.6.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	}
 }
