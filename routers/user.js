@@ -14,3 +14,5 @@ router.post('/register', controllers.user.post.register);
 router.get('/logout', auth(), controllers.user.get.logout);
 
 module.exports = router;
+
+// 8/28

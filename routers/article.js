@@ -16,4 +16,4 @@ router.get('/delete/:id', auth(), controllers.article.delete);
 
 module.exports = router;
 
-// this works with clicking all articles
+// this works with clicking all articles 8/28

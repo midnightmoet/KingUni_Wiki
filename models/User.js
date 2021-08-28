@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const saltRounds = 10;
+const saltRounds = 8;
 const Model = mongoose.model;
 const Schema = mongoose.Schema;
 const { String, ObjectId, Number, Boolean } = Schema.Types;
@@ -49,3 +49,5 @@ userSchema.pre("save", function (next) {
 });
 
 module.exports = new Model("User", userSchema);
+
+// 8/28

@@ -172,7 +172,7 @@ article>p {
 	width: 100%;
 	margin-top: 1%;
 	border-radius: 6px;
-	background-color: #FA8072;
+	background-color: orchid;
 }
 
 #notifications p{
@@ -187,5 +187,5 @@ footer {
     margin: 20px;
     padding: 20px;
     background-color: #5d89a1;
-    color: white;
+    color: lightgrey;
 }
