@@ -1,8 +1,10 @@
 <div class="spacer">
     <h2>{{ article.title }}
         <div class="controls">
-            {{#if isLoggedIn}}
+            {{!-- if user is logged in --}}
+            {{#if isLoggedIn}} 
                 <a href="/article/edit/{{ article._id }}">[edit]</a>
+                {{!-- if logged in AND is the author --}}
                 {{#if isAuthor}}
                     <a href="/article/delete/{{ article._id }}">[delete]</a>
                 {{/if}}

@@ -2,12 +2,12 @@
     <h2>Latests articles</h2>
     {{#each articles}}
         <article>
-            <h3>{{this.title}}</h3>
+            <h3>{{article.title}}</h3>
             <p>
-                {{this.description}}&hellip;
+                {{article.description}}&hellip;
             </p>
             <div class="controls">
-                <a href="/article/details/{{this._id}}">Read more</a>
+                <a href="/article/details/{{article._id}}">Read more</a>
             </div>
         </article>
     {{/each}}
