@@ -5,14 +5,14 @@ const jwt = require("../utilities/jwt");
 module.exports = {
 	get: {
 		login: (req, res) => {
-			if (req.cookies["username"]) {
+			if (req.cookies.username) {
 				res.redirect("/");
 				return;
 			}
 			res.render("login");
 		},
 		register: (req, res) => {
-			if (req.cookies["username"]) {
+			if (req.cookies.username) {
 				res.redirect("/");
 				return;
 			}

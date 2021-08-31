@@ -22,13 +22,14 @@ module.exports = (app) => {
     app.use(cookieParser());
 
     app.use(bodyParser.urlencoded({ extended: false }));
+    // line through bodyParser means it is depreciated
 
     app.use((req, res, next) => {
         res.locals.isLoggedIn = req.cookies[config.authCookie] !== undefined;
-        res.locals.username = req.cookies["username"];
+        res.locals.username = req.cookies.username;
 
         next();
     });
 };
 
-// 8/28
+// 8/30
