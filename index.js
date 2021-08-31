@@ -6,7 +6,7 @@ databaseConnector().then(() => {
     const app = require('express')();
     
     require('./config/express')(app);
-    require('./config/routes')(app);
+    require('./config/router')(app);
 
     const port = config.port;
 

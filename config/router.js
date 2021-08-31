@@ -14,4 +14,4 @@ module.exports = (app) => {
     });
 };
 
-// 8/28
+// 8/31 changed the file name routes.js to router.js AND also made sure to fix the name in the main index.js file
