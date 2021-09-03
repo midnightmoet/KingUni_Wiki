@@ -3,6 +3,7 @@ const models = require("../models");
 const jwt = require("../utilities/jwt");
 
 module.exports = {
+	//GET login, register, logout  
 	get: {
 		login: (req, res) => {
 			if (req.cookies.username) {
@@ -24,6 +25,8 @@ module.exports = {
 				.redirect("/");
 		},
 	},
+
+	//POST login, register
 	post: {
 		login: (req, res, next) => {
 			const { username, password } = req.body;
@@ -82,4 +85,4 @@ module.exports = {
 	},
 };
 
-// 8/28
+// --9/3--//

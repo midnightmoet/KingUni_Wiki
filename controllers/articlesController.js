@@ -1,4 +1,4 @@
-const models = require("../models");
+const models = require("../models");  //Models
 
 module.exports = {
 	// --GET --//
@@ -118,4 +118,4 @@ module.exports = {
 	},
 };
 
-// 8/28
+// --9/3 -- //

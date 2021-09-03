@@ -4,11 +4,10 @@
         <article>
             <h3>{{article.title}}</h3>
             <p>
-                {{article.description}}&hellip;  
-                {{!-- &hellip; is simply 3 dots --}}
+                {{content}}
             </p>
             <div class="controls">
-                <a href="/article/details/{{article._id}}">Read more</a>
+                <a href="/article/{{article._id}}">Read more</a>
             </div>
         </article>
     {{/each}}

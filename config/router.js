@@ -1,6 +1,6 @@
 const routers = require('../routers');
-const controllers = require('../controllers');
-const auth = require('../utilities/auth');
+const controllers = require('../controllers'); //This has specific controllers that have the gets and posts within it
+const auth = require('../utilities/auth'); //Used the full word instead of an abbreviation because it made sense
 
 module.exports = (app) => {
     app.use('/', routers.home);
@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.use('/article', routers.article);
 
     app.use('*', (req, res, next) => {
-        res.send('<h1>PAGE NOT FOUND!</h1>');
+        res.send('<h1>WHOOPS, PAGE NOT FOUND!</h1>');
     });
 };
 

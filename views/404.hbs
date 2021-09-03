@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KingUni-Wiki</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+    <div>
+        <aside>
+            <div class="center">
+                <img class="logo" src="/img/logo.png" alt="logo">
+            </div>
+
+            <nav>
+                <a href="/">Main Page</a>
+                <a href="/articles/all">All Articles</a>
+                <form action="/search" method="GET">
+                    <input type="text" name="search">
+                    <input type="submit" value="Search">
+                </form>
+            </nav>
+        </aside>
+        <div id="container">
+            <header>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </header>
+            <main>
+                <h1>Welcome to KingUni Wiki!</h1>
+                <section id="featured">
+                    <h2>404 Page Not Found</h2>
+                </section>
+            </main>
+            {{>footer}}
+        </div>
+    </div>
+</body>
+
+</html>
+
+{{!-- Added this because of a prior project that used it .. 9/1 --}}

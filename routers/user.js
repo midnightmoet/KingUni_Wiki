@@ -1,8 +1,15 @@
-const router = require('express').Router();
-const controllers = require('../controllers');
-const auth = require('../utilities/auth');
+//NPM Library imports
+const router = require('express').Router();  //<- this is a way to combine lines 3 and 4 and make it more efficient
+// const express = require('express');
+// const router = express.Router(); 
 
-// LOGIN
+// Controllers
+const controllers = require('../controllers'); 
+
+// Middleware aka Utilities  
+const auth = require('../utilities/auth'); 
+
+// LOGIN with GET and POST
 router.get('/login', controllers.user.get.login);
 router.post('/login', controllers.user.post.login);
 
